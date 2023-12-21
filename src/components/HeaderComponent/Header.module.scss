@@ -2,7 +2,10 @@
 @import "styles/variables";
 
 .wrapper {
-  @media (width > $tablet-width) {
+  @media (min-width: $mobile-width) {
+    @include flex-column;
+  }
+  @media (min-width: $tablet-width) {
     @include flex-row;
     padding-right: 120px;
   }
@@ -23,11 +26,11 @@
 }
 
 .menu-items {
-  @media (width > $tablet-width) {
+  @media (min-width: $tablet-width) {
     @include flex-row;
   }
   .menu-item {
-    @media (width > $tablet-width) {
+    @media (min-width: $tablet-width) {
       margin-left: 16px;
     }
   }
@@ -50,7 +53,6 @@
   transition: 0.1s linear;
   border-top: 3px solid $dark-blue;
   right: 0;
-  margin: 3px;
   &::before,
   &::after {
     content: "";
@@ -84,7 +86,7 @@
     border-color: $white;
   }
 
-  @media (width > $mobile-width) {
+  @media (min-width: $mobile-width) {
     display: none;
   }
 }

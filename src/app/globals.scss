@@ -92,15 +92,17 @@ button {
   width: 100%;
 }
 
-.show-lg {
-  @media (width > $mobile-width) {
-    display: block;
+.show {
+  &-sm {
+    @media (min-width: $mobile-width) {
+      display: block;
+    }
   }
-}
 
-.hide-sm {
-  @media (max-width: $tablet-width) {
-    display: none;
+  &-lg {
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }
 
@@ -153,11 +155,11 @@ button {
   font-size: 0.85rem;
   line-height: 1.5;
 
-  @media (width > $mobile-width) {
+  @media (min-width: $mobile-width) {
     font-size: 0.95rem;
   }
 
-  @media (width > $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 1rem;
   }
 }
