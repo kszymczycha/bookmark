@@ -67,9 +67,9 @@ const HeaderComponent: FC<any> = () => {
           className={`ml-8 mr-8 pt-8 pb-8 z-index-3 relative`}
         >
           <div
-            className={`${style.wrapper} flex justify-between items-center relative container flex-column z-index-1`}
+            className={`${style.wrapper} flex justify-between items-center relative container flex-row z-index-1`}
           >
-            <div className="flex w-100 mr-auto logo-wrapper">
+            <div className="flex w-100 mr-auto logo-wrapper pt-4 pb-4">
               <Link href="/" className="flex">
                 <LogoBookmarkSvg
                   className={`${expand ? `${style[`logo-white`]}` : ""}`}
@@ -84,7 +84,7 @@ const HeaderComponent: FC<any> = () => {
               checked={expand}
             />
             <label htmlFor="hamburger" className={style["hamburger-label"]} />
-            <nav className="w-100 display-none show-lg">
+            <nav className="w-100 display-none show-sm">
               <ul
                 className={`${style["menu-items"]} flex-column list-style-none justify-end flex`}
               >
@@ -144,7 +144,7 @@ const HeaderComponent: FC<any> = () => {
             }}
           >
             <>
-              <div className="pr-2 w-50 pt-10 hide-sm">
+              <div className="pr-2 w-50 pt-10 display-none show-lg">
                 <ButtonComponent
                   size={ButtonSizeEnum.LG}
                   color={ButtonColorEnum.PRIMARY}
