@@ -7,6 +7,7 @@ import { FeaturesComponent } from "../FeaturesComponent";
 import { DownloadExtensionComponent } from "../DownloadExtensionComponent";
 import { FaqComponent } from "@/components/FaqComponent";
 import { FormComponent } from "../FormComponent";
+import { basePath } from "@/config";
 
 const MainComponent: FC<any> = () => {
   return (
@@ -18,7 +19,7 @@ const MainComponent: FC<any> = () => {
         Open a new browser tab see your sites load instantly. Try for
         free."
         image={{
-          src: "/assets/svg/illustration-hero.svg",
+          src: `${basePath}/assets/svg/illustration-hero.svg`,
           alt: "Illustration hero",
           width: 657,
           height: 466,
