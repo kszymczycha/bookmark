@@ -1,0 +1,12 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.faq {
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+  }
+}
+
+.btn-wrapper {
+  width: 120px;
+}

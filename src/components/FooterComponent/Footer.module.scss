@@ -1,0 +1,40 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.footer {
+  @media (min-width: $tablet-width) {
+    @include flex-row;
+  }
+
+  .logo-white {
+    path:first-child {
+      fill: $white;
+    }
+  }
+
+  .menu-items {
+    @media (min-width: $tablet-width) {
+      @include flex-row;
+    }
+
+    .menu-item {
+      @media (min-width: $tablet-width) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .socials {
+    svg {
+      cursor: pointer;
+      &:hover {
+        path {
+          fill: $light-red;
+        }
+      }
+    }
+    @media (min-width: $tablet-width) {
+      margin-left: auto;
+    }
+  }
+}

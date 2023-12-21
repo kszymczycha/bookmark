@@ -1,0 +1,10 @@
+export { default as LogoBookmarkSvg } from "./logo-bookmark.svg";
+export { default as IllustrationHeroSvg } from "./illustration-hero.svg";
+export { default as LogoChromeSvg } from "./logo-chrome.svg";
+export { default as LogoFirefoxSvg } from "./logo-firefox.svg";
+export { default as LogoOperaSvg } from "./logo-opera.svg";
+export { default as BgDotsSvg } from "./bg-dots.svg";
+export { default as IconArrowSvg } from "./icon-arrow.svg";
+export { default as IconErrorSvg } from "./icon-error.svg";
+export { default as IconFacebookSvg } from "./icon-facebook.svg";
+export { default as IconTwitterSvg } from "./icon-twitter.svg";

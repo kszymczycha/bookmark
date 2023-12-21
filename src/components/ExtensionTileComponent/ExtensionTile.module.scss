@@ -1,0 +1,14 @@
+@import "styles/mixins";
+
+.tile {
+  width: 100%;
+  max-width: 275px;
+
+  &:nth-child(2) {
+    @include transformX(45px);
+  }
+
+  &:nth-child(3) {
+    @include transformX(95px);
+  }
+}

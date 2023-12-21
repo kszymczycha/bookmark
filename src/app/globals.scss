@@ -1,0 +1,353 @@
+@import "styles/variables";
+@import "styles/spaces";
+@import "styles/mixins";
+
+// Reset
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Root
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: $body-font-size;
+  color: $dark-blue;
+  font-weight: $body-font-weight-normal;
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  scroll-behavior: smooth;
+}
+
+a {
+  &:link {
+    text-decoration: none;
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Position
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+// Visibility
+.hidden {
+  visibility: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+// Sizes
+.container {
+  width: 100%;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.show-lg {
+  @media (width > $mobile-width) {
+    display: block;
+  }
+}
+
+.hide-sm {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+// Typography
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-gray {
+  color: $gray;
+}
+
+.h1 {
+  font-size: 1.5rem;
+  font-weight: $body-font-weight-medium;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $mobile-width) {
+    font-size: 1.75rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 2rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.h2 {
+  font-size: 1.25rem;
+  font-weight: $body-font-weight-medium;
+
+  @media (min-width: $mobile-width) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.75rem;
+  }
+}
+
+.p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+
+  @media (width > $mobile-width) {
+    font-size: 0.95rem;
+  }
+
+  @media (width > $tablet-width) {
+    font-size: 1rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-small {
+  font-size: 0.95rem;
+}
+
+.text-x-small {
+  font-size: 0.75rem;
+}
+
+.text-normal {
+  font-size: 1rem;
+}
+
+.text-medium {
+  font-weight: $body-font-weight-medium;
+}
+
+// Flexbox
+.flex {
+  @include flex;
+}
+
+.flex-1 {
+  @include flex-1;
+}
+
+.flex-50 {
+  @include flex-50;
+}
+
+.flex-column {
+  @include flex-column;
+}
+
+.flex-column-reverse {
+  @include flex-column-reverse;
+}
+
+.flex-row {
+  @include flex-row;
+}
+
+.flex-row-reverse {
+  @include flex-row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-grow-1 {
+  @include flex-grow(1);
+}
+
+.flex-grow-3 {
+  @include flex-grow(3);
+}
+
+.justify-between {
+  @include justify-between;
+}
+
+.justify-end {
+  @include justify-end;
+}
+
+.justify-center {
+  @include justify-center;
+}
+
+.items-center {
+  @include items-center;
+}
+
+// Margins
+.mr-auto {
+  margin-right: auto;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+// Custom
+.list-style-none {
+  list-style: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.appearance-none {
+  appearance: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hover-red {
+  &:hover {
+    color: $light-red;
+  }
+}
+
+.custom-modal {
+  max-width: 98vw !important;
+  padding: 0 !important;
+}
+
+// Background
+.bg-transparent {
+  background-color: $transparent;
+}
+
+.bg-light-blue {
+  background-color: $light-blue;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-dark-blue {
+  background-color: $dark-blue;
+}
+
+// Z-index
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+// Borders
+.bt-1 {
+  border-top: 1px solid;
+}
+
+.bb-1 {
+  border-bottom: 1px solid;
+}
+
+.b-gray {
+  border-color: $gray;
+}
+
+.b-radius-4 {
+  border-radius: 4px;
+}
+
+.b-radius-5 {
+  border-radius: 5px;
+}
+
+.b-radius-15 {
+  border-radius: 15px;
+}
+
+.b-none {
+  border: none;
+}
+
+.outline-none {
+  outline: none;
+}
+
+// Shadows
+.box-shadow {
+  box-shadow: 0 10px 45px -30px $gray;
+}

@@ -1,0 +1,33 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.feature {
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+    p {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  // .navigation {
+  //   @media (min-width: $tablet-width) {
+  //     @include flex-row;
+  //   }
+  //   .feature-item {
+  //     @media (min-width: $tablet-width) {
+  //       display: block;
+  //     }
+  //     &.underline {
+  //       border-bottom: 3px solid $light-red;
+  //     }
+  //   }
+  // }
+
+  // button {
+  //   font-size: 0.95rem !important;
+  //   &:hover {
+  //     background-color: transparent !important;
+  //   }
+  // }
+}

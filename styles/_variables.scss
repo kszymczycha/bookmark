@@ -1,0 +1,19 @@
+// Layout
+$mobile-width: 375px; // Mobile screen width
+$tablet-width: 768px; // Tablet screen width
+$desktop-width: 1440px; // Desktop screen width
+
+// Colors
+$light-blue: hsl(231, 69%, 60%);
+$light-red: hsl(0, 94%, 66%);
+$gray: hsl(229, 8%, 60%);
+$dark-blue: hsl(229, 31%, 21%);
+$transparent: transparent;
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
+// Typography
+$body-font-size: 18px;
+// $body-font-family: "Rubik", sans-serif;
+$body-font-weight-normal: 400;
+$body-font-weight-medium: 500;

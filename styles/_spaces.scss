@@ -1,0 +1,62 @@
+$spacing-step: 4px;
+
+$spaceMap: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+
+@function generateSpaceClasses($property, $directions) {
+  $output: ();
+
+  @each $prefix, $prop in $directions {
+    @each $direction, $dirProp in $spaceMap {
+      @for $i from 0 through 25 {
+        $class: #{$prefix}#{$direction}-#{$i};
+        $value: $i * $spacing-step;
+
+        $output: map-merge(
+          $output,
+          (
+            $class: (
+              #{$prop}-#{$dirProp}: #{$value},
+            ),
+          )
+        );
+      }
+    }
+  }
+
+  @return $output;
+}
+
+$marginClasses: generateSpaceClasses(
+  "margin",
+  (
+    "m": "margin",
+  )
+);
+
+$paddingClasses: generateSpaceClasses(
+  "padding",
+  (
+    "p": "padding",
+  )
+);
+
+@each $class, $styles in $marginClasses {
+  .#{$class} {
+    @each $property, $value in $styles {
+      #{$property}: $value;
+    }
+  }
+}
+
+@each $class, $styles in $paddingClasses {
+  .#{$class} {
+    @each $property, $value in $styles {
+      #{$property}: $value;
+    }
+  }
+}

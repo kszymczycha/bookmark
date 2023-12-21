@@ -1,0 +1,84 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+$darken: 10%;
+$lighten: 35%;
+
+.btn {
+  @include buttonSize(1rem);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 5px -5px $black;
+  font-weight: 500;
+
+  &.small {
+    @include buttonSize(0.5rem);
+  }
+
+  &.large {
+    @include buttonSize(0.75rem);
+  }
+
+  &.extra-large {
+    @include buttonSize(1rem);
+  }
+
+  &.primary {
+    background-color: $light-blue;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $light-blue;
+      border: 2px solid $light-blue;
+    }
+    &:active {
+      background-color: darken($light-blue, $darken);
+      color: $white;
+      border: none;
+    }
+  }
+
+  &.secondary {
+    background-color: $light-red;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $light-red;
+      border: 2px solid $light-red;
+    }
+    &:active {
+      background-color: darken($light-red, $darken);
+      color: $white;
+      border: none;
+    }
+  }
+
+  &.gray {
+    background-color: lighten($gray, $lighten);
+    color: darken($gray, $darken);
+    &:hover {
+      background-color: $white;
+      border: 2px solid darken($gray, $darken);
+    }
+    &:active {
+      background-color: lighten($gray, $lighten - $darken);
+      border: none;
+    }
+  }
+
+  &.transparent {
+    background-color: $transparent;
+    color: darken($gray, $darken);
+    box-shadow: none;
+    &:hover {
+      background-color: $transparent;
+      color: $light-red;
+    }
+    &:active {
+      background-color: lighten($gray, $lighten);
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.panel {
+  .wrapper {
+    .container {
+      .left {
+        left: 0;
+        background-color: $light-blue;
+        height: 150px;
+        width: 77%;
+        top: 21%;
+        z-index: -1;
+        border-top-right-radius: 180px;
+        border-bottom-right-radius: 180px;
+        @media (width > $mobile-width) {
+          top: 29%;
+          height: 250px;
+        }
+        @media (width > $tablet-width) {
+          height: 385px;
+          width: 40%;
+          top: 28%;
+        }
+      }
+
+      .right {
+        right: 0;
+        background-color: $light-blue;
+        border-top-left-radius: 180px;
+        border-bottom-left-radius: 180px;
+        height: 150px;
+        width: 77%;
+        top: 18%;
+        z-index: -1;
+        @media (width > $mobile-width) {
+          top: 29%;
+          height: 250px;
+        }
+        @media (width > $tablet-width) {
+          height: 385px;
+          width: 40%;
+          top: 32%;
+        }
+      }
+
+      @media (width > $tablet-width) {
+        @include flex-row;
+        @include justify-between;
+
+        .img-wrapper {
+          width: 50%;
+          margin-right: 100px;
+        }
+
+        .content {
+          padding-top: 90px;
+          width: 50%;
+          .header,
+          .text {
+            text-align: left;
+            max-width: 450px;
+          }
+
+          .text {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          .buttons {
+            max-width: 350px;
+          }
+        }
+      }
+    }
+  }
+
+  &.reverse {
+    .container {
+      @media (width > $tablet-width) {
+        @include flex-row-reverse;
+        .img-wrapper {
+          width: 60%;
+          margin-right: 0;
+        }
+        .content {
+          width: 40%;
+        }
+      }
+    }
+  }
+}

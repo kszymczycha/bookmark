@@ -1,0 +1,40 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.expand-collapse {
+  &:first-child {
+    border-top: 1px solid $gray;
+  }
+
+  .rotate-icon {
+    @include rotate(180deg);
+    path {
+      stroke: $light-red;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+  }
+
+  .expand-btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+
+    &.expanded {
+      max-height: 500px;
+    }
+
+    &.collapsed {
+      max-height: 0;
+    }
+  }
+}

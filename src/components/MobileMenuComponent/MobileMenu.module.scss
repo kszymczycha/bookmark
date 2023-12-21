@@ -1,0 +1,47 @@
+@import "styles/variables";
+
+.mobile {
+  background-color: rgba($dark-blue, 0.9);
+
+  button {
+    color: $white !important;
+    font-weight: $body-font-weight-normal;
+
+    &:hover {
+      color: $white !important;
+    }
+
+    &:active {
+      color: $dark-blue !important;
+      background-color: $transparent;
+      border: 2px solid $white !important;
+    }
+  }
+
+  .btn-login-wrapper {
+    button {
+      color: $white !important;
+      background-color: $transparent;
+      border: 2px solid $white !important;
+
+      &:hover {
+        color: $white !important;
+      }
+
+      &:active {
+        color: $dark-blue !important;
+      }
+    }
+  }
+
+  .socials {
+    svg {
+      cursor: pointer;
+      &:hover {
+        path {
+          fill: $light-red;
+        }
+      }
+    }
+  }
+}
