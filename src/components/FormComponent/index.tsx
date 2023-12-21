@@ -53,7 +53,7 @@ const FormComponent: FC<any> = () => {
             onSubmit={handleSubmit}
             className={`${styles.form} flex flex-column`}
           >
-            <div className={`${styles["input-wrapper"]} mb-2 mt-2 flex-grow-3`}>
+            <div className={`${styles["input-wrapper"]} mb-2 mt-2`}>
               <div
                 className={`${
                   !isValid ? styles["input-invalid"] : ""
@@ -76,7 +76,7 @@ const FormComponent: FC<any> = () => {
                 <p className={styles.alert}>Whoops, make sure it's an email</p>
               )}
             </div>
-            <div className="mb-2 mt-2 flex-grow-1">
+            <div className={`${styles["submit-wrapper"]} mb-2 mt-2`}>
               <ButtonComponent
                 submit={true}
                 size={ButtonSizeEnum.LG}

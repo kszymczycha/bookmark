@@ -14,6 +14,7 @@
     .input-wrapper {
       @media (min-width: $tablet-width) {
         margin-right: 20px;
+        width: 70%;
       }
 
       .input-invalid {
@@ -52,8 +53,14 @@
       }
     }
 
-    button {
-      box-shadow: none;
+    .submit-wrapper {
+      @media (min-width: $tablet-width) {
+        width: 30%;
+      }
+
+      button {
+        box-shadow: none;
+      }
     }
   }
 }

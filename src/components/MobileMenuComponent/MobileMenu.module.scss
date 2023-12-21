@@ -8,7 +8,7 @@
     font-weight: $body-font-weight-normal;
 
     &:hover {
-      color: $white !important;
+      color: $light-red !important;
     }
 
     &:active {
@@ -23,9 +23,10 @@
       color: $white !important;
       background-color: $transparent;
       border: 2px solid $white !important;
+      font-weight: $body-font-weight-medium;
 
       &:hover {
-        color: $white !important;
+        color: $light-red !important;
       }
 
       &:active {
