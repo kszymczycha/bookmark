@@ -6,6 +6,7 @@ import { ButtonColorEnum } from "@/enum/button-color.enum";
 import { ButtonSizeEnum } from "@/enum/button-size.enum";
 import { PanelComponent } from "@/components/PanelComponent";
 import { FeaturesNavigationComponent } from "@/components/FeaturesNavigationComponent";
+import { basePath } from "@/config";
 
 const FeaturesComponent: FC<any> = () => {
   return (
@@ -27,7 +28,7 @@ const FeaturesComponent: FC<any> = () => {
         title="Bookmark in one click"
         description="Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites."
         image={{
-          src: "/assets/svg/illustration-features-tab-1.svg",
+          src: `${basePath}/assets/svg/illustration-features-tab-1.svg`,
           alt: "Illustration features",
           width: 536,
           height: 345,

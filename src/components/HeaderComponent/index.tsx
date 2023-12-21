@@ -14,6 +14,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { PanelComponent } from "@/components/PanelComponent";
 import { FeaturesNavigationComponent } from "@/components/FeaturesNavigationComponent";
+import { basePath } from "@/config";
 
 const useHeaderComponentHook = (): any => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -136,7 +137,7 @@ const HeaderComponent: FC<any> = () => {
             title="Inteligent search"
             description="Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks."
             image={{
-              src: "/assets/svg/illustration-features-tab-2.svg",
+              src: `${basePath}/assets/svg/illustration-features-tab-2.svg`,
               alt: "Illustration features",
               width: 478,
               height: 416,
