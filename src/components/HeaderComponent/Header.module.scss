@@ -2,9 +2,6 @@
 @import "styles/variables";
 
 .wrapper {
-  // @media (min-width: $mobile-width) {
-  //   @include flex-column;
-  // }
   @media (min-width: $tablet-width) {
     @include flex-row;
     padding-right: 120px;
