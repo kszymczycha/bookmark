@@ -99,8 +99,14 @@ button {
     }
   }
 
-  &-lg {
+  &-md {
     @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &-lg {
+    @media (min-width: $laptop-width) {
       display: block;
     }
   }

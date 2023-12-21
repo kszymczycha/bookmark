@@ -35,7 +35,7 @@ const FeaturesComponent: FC<any> = () => {
         }}
       >
         <>
-          <div className="pr-2 w-50 pt-10 display-none show-lg">
+          <div className="pr-2 w-50 pt-10 display-none show-md">
             <ButtonComponent
               size={ButtonSizeEnum.LG}
               color={ButtonColorEnum.PRIMARY}

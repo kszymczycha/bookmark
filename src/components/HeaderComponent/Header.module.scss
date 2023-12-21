@@ -2,9 +2,9 @@
 @import "styles/variables";
 
 .wrapper {
-  @media (min-width: $mobile-width) {
-    @include flex-column;
-  }
+  // @media (min-width: $mobile-width) {
+  //   @include flex-column;
+  // }
   @media (min-width: $tablet-width) {
     @include flex-row;
     padding-right: 120px;
@@ -33,6 +33,11 @@
     @media (min-width: $tablet-width) {
       margin-left: 16px;
     }
+  }
+
+  button {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -86,7 +91,7 @@
     border-color: $white;
   }
 
-  @media (min-width: $mobile-width) {
+  @media (min-width: $laptop-width) {
     display: none;
   }
 }
