@@ -28,7 +28,7 @@ const useHeaderComponentHook = (): any => {
   const { width } = useScreenSize();
 
   useEffect(() => {
-    const collapse = width > ScreenSizeEnum.MOBILE;
+    const collapse = width > ScreenSizeEnum.LAPTOP;
     if (collapse) {
       setExpand(!collapse);
     }
@@ -84,7 +84,7 @@ const HeaderComponent: FC<any> = () => {
               checked={expand}
             />
             <label htmlFor="hamburger" className={style["hamburger-label"]} />
-            <nav className="w-100 display-none show-sm">
+            <nav className="w-100 display-none show-lg">
               <ul
                 className={`${style["menu-items"]} flex-column list-style-none justify-end flex`}
               >
@@ -144,7 +144,7 @@ const HeaderComponent: FC<any> = () => {
             }}
           >
             <>
-              <div className="pr-2 w-50 pt-10 display-none show-lg">
+              <div className="pr-2 w-50 pt-10 display-none show-md">
                 <ButtonComponent
                   size={ButtonSizeEnum.LG}
                   color={ButtonColorEnum.PRIMARY}
