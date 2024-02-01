@@ -13,6 +13,7 @@ $lighten: 35%;
   box-sizing: border-box;
   box-shadow: 0px 5px 5px -5px $black;
   font-weight: 500;
+  border: 2px solid transparent;
 
   &.small {
     @include buttonSize(0.5rem);
